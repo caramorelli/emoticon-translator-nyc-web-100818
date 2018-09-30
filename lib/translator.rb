@@ -12,8 +12,6 @@ def load_library(lib)
  new_lib
 end
 
-# load_library("./lib/emoticons.yml")
-
 def get_japanese_emoticon(lib, message)
   library = load_library(lib)
   sym = library["get_emoticon"][message]
