@@ -5,13 +5,9 @@ def load_library(lib)
   emoticons = YAML.load_file(lib) 
   # new_lib = {}
   new_lib = { :get_meaning => {}, :get_emoticon => {}}
-  library.each do |key, val|
-    inside_hash = { val[-1] => key}
-    new_lib.merge(new_lib["get_meaning"] = inside_hash)
-    # puts new_lib["get_meaning"]
-  end 
-  puts new_lib.values
-  new_lib
+  
+  new_lib["get_emoticon"][emoticon_set.first] = emoticon_set.last
+#     emoticon_hash["get_meaning"][emoticon_set.last] = english_word
  
 end
 
