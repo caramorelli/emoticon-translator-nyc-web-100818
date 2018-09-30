@@ -2,8 +2,9 @@ require "yaml"
 require "pry"
 
 def load_library(lib)
-  library = YAML.load_file(lib) 
+  emoticon = YAML.load_file(lib) 
   new_lib = {}
+  
   new_lib = { "get_meaning" => {}, "get_emoticon" => {}}
   library.each do |key, val|
     inside_hash = { val[-1] => key}
