@@ -3,10 +3,11 @@ require "pry"
 
 def load_library(lib)
   emoticons = YAML.load_file(lib) 
-  # new_lib = {}
-  new_lib = { :get_meaning => {}, :get_emoticon => {}}
+  new_lib = {}
   
   emoticons.each do |word, sym|
+    new_lib
+  end 
   
   new_lib["get_emoticon"][emoticon_set.first] = emoticon_set.last
 emoticon_hash["get_meaning"][emoticon_set.last] = english_word
@@ -19,7 +20,7 @@ end
 #   emoticon_hash["get_meaning"] = Hash.new
 
 #   emoticons.each do |english_word, emoticon_set|
-#     emoticon_hash["get_emoticon"][emoticon_set.first] = emoticon_set.last
+#     emoticon_hash["get_emoticon"][sym.first] = emoticon_set.last
 #     emoticon_hash["get_meaning"][emoticon_set.last] = english_word
 #   end
 #   emoticon_hash
