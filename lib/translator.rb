@@ -7,7 +7,7 @@ def load_library(lib)
   
   emoticons.each do |word, sym|
     new_lib["get_emoticon"][sym.first] = sym.last 
-    new_lib["get_meaning"]
+    new_lib["get_meaning"][sym.last] = word
   end 
   
   new_lib["get_emoticon"][emoticon_set.first] = emoticon_set.last
