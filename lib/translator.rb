@@ -18,6 +18,7 @@ def get_japanese_emoticon(lib, message)
   library = load_library(lib)
   sym = library["get_emoticon"][message]
   return "Sorry, that emoticon was not found" if sym.nil?
+  sym
 end
 
 # def get_japanese_emoticon(path, emoticon)
