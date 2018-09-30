@@ -6,7 +6,7 @@ def load_library(lib)
   new_lib = {}
   
   emoticons.each do |word, sym|
-    new_lib
+    new_lib["get_emoticon"][sym.first] = sym.last
   end 
   
   new_lib["get_emoticon"][emoticon_set.first] = emoticon_set.last
@@ -20,8 +20,8 @@ end
 #   emoticon_hash["get_meaning"] = Hash.new
 
 #   emoticons.each do |english_word, emoticon_set|
-#     emoticon_hash["get_emoticon"][emoticon_set.first] = emoticon_set.last
-#     emoticon_hash["get_meaning"][emoticon_set.last] = english_word
+#     emoticon_hash["get_emoticon"][sym.first] = sym.last
+#     emoticon_hash["get_meaning"][sym.last] = english_word
 #   end
 #   emoticon_hash
 # end
