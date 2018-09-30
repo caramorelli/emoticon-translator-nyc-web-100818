@@ -17,10 +17,7 @@ end
 def get_japanese_emoticon(lib, message)
   library = load_library(lib)
   sym = library["get_emoticon"][message]
-   library.each do |key, val|
-    return val if val.include?(message)
-  end 
-  return "Sorry, that emoticon was not found"
+  return "Sorry, that emoticon was not found" if sym.nil?
 end
 
 # def get_japanese_emoticon(path, emoticon)
