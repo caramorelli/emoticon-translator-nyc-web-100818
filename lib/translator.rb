@@ -23,7 +23,7 @@ end
 
 def get_english_meaning(lib, message)
   library = load_library(lib)
-  sym = library["get_emoticon"][message]
+  sym = library["get_meaning"][message]
   return "Sorry, that emoticon was not found" if sym.nil?
   sym
 end
