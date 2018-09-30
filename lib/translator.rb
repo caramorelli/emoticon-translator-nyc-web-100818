@@ -22,14 +22,6 @@ def get_japanese_emoticon(lib, message)
   return "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning(lib, message)
-  library = load_library(lib)
-  library.each do |key, val|
-    return key if val.include?(message)
-  end 
-  return "Sorry, that emoticon was not found"
-end
-
 # def get_japanese_emoticon(path, emoticon)
 #   emoticon_hash = load_library(path)
 #   result = emoticon_hash["get_emoticon"][emoticon]
@@ -38,6 +30,14 @@ end
 #   end
 #   result
 # end
+
+def get_english_meaning(lib, message)
+  library = load_library(lib)
+  library.each do |key, val|
+    return key if val.include?(message)
+  end 
+  return "Sorry, that emoticon was not found"
+end
 
 # def get_english_meaning(path, emoticon)
 #   emoticon_hash = load_library(path)
