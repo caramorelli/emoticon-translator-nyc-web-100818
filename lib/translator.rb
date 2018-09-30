@@ -3,8 +3,7 @@ require "pry"
 
 def load_library(lib)
   emoticons = YAML.load_file(lib) 
-  new_lib = {}
-  
+  # new_lib = {}
   new_lib = { "get_meaning" => {}, "get_emoticon" => {}}
   library.each do |key, val|
     inside_hash = { val[-1] => key}
@@ -17,8 +16,6 @@ def load_library(lib)
 end
 
 # def load_library(path)
-#   emoticons = YAML.load_file(path)
-#   emoticon_hash = Hash.new
 
 #   emoticon_hash["get_emoticon"] = Hash.new
 #   emoticon_hash["get_meaning"] = Hash.new
