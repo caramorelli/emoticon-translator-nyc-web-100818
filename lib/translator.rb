@@ -3,7 +3,7 @@ require "pry"
 
 def load_library(lib)
   emoticons = YAML.load_file(lib) 
-  new_lib = {}
+  new_lib = {"get_emoticon" = nil}
   
   emoticons.each do |word, sym|
     new_lib["get_emoticon"][sym.first] = sym.last 
