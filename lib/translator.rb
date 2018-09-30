@@ -16,6 +16,7 @@ end
 
 def get_japanese_emoticon(lib, message)
   library = load_library(lib)
+  sym =
    library.each do |key, val|
     return val if val.include?(message)
   end 
